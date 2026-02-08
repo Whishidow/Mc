@@ -1,0 +1,889 @@
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000000000000000000000000000000000000..7ad087984f9ffab1be9070027ac2846f1a4b203e
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,8 @@
++# Generated addon binaries
++*.mcaddon
++
++# Generated resource binaries
++Wizardiuz_Staff_Addon/BP/pack_icon.png
++Wizardiuz_Staff_Addon/RP/pack_icon.png
++Wizardiuz_Staff_Addon/RP/textures/items/*.png
++Wizardiuz_Staff_Addon/dist/
+diff --git a/Wizardiuz_Staff.mcaddon b/Wizardiuz_Staff.mcaddon
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff.mcaddon
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/BP/items/scroll_banished_sun.json b/Wizardiuz_Staff_Addon/BP/items/scroll_banished_sun.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..a769d291296c440e365c59e2075a69139d90bb1b
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/items/scroll_banished_sun.json
+@@ -0,0 +1,18 @@
++{
++  "format_version": "1.21.10",
++  "minecraft:item": {
++    "description": {
++      "identifier": "wizardiuz:scroll_banished_sun",
++      "menu_category": {
++        "category": "items"
++      }
++    },
++    "components": {
++      "minecraft:max_stack_size": 1,
++      "minecraft:icon": "wizardiuz_scroll_banished_sun",
++      "minecraft:display_name": {
++        "value": "item.wizardiuz:scroll_banished_sun.name"
++      }
++    }
++  }
++}
+diff --git a/Wizardiuz_Staff_Addon/BP/items/scroll_dune_aegis.json b/Wizardiuz_Staff_Addon/BP/items/scroll_dune_aegis.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..76cca507a7156a7745700328a6ff023027b50ab6
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/items/scroll_dune_aegis.json
+@@ -0,0 +1,18 @@
++{
++  "format_version": "1.21.10",
++  "minecraft:item": {
++    "description": {
++      "identifier": "wizardiuz:scroll_dune_aegis",
++      "menu_category": {
++        "category": "items"
++      }
++    },
++    "components": {
++      "minecraft:max_stack_size": 1,
++      "minecraft:icon": "wizardiuz_scroll_dune_aegis",
++      "minecraft:display_name": {
++        "value": "item.wizardiuz:scroll_dune_aegis.name"
++      }
++    }
++  }
++}
+diff --git a/Wizardiuz_Staff_Addon/BP/items/scroll_gale_sigil.json b/Wizardiuz_Staff_Addon/BP/items/scroll_gale_sigil.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..14c56ded58b7dfae19f41e4c37dea23b846371fc
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/items/scroll_gale_sigil.json
+@@ -0,0 +1,18 @@
++{
++  "format_version": "1.21.10",
++  "minecraft:item": {
++    "description": {
++      "identifier": "wizardiuz:scroll_gale_sigil",
++      "menu_category": {
++        "category": "items"
++      }
++    },
++    "components": {
++      "minecraft:max_stack_size": 1,
++      "minecraft:icon": "wizardiuz_scroll_gale_sigil",
++      "minecraft:display_name": {
++        "value": "item.wizardiuz:scroll_gale_sigil.name"
++      }
++    }
++  }
++}
+diff --git a/Wizardiuz_Staff_Addon/BP/items/scroll_hail_requiem.json b/Wizardiuz_Staff_Addon/BP/items/scroll_hail_requiem.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..b8a93b8230aecae27cb74cdbd83f62ec2f41ca07
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/items/scroll_hail_requiem.json
+@@ -0,0 +1,18 @@
++{
++  "format_version": "1.21.10",
++  "minecraft:item": {
++    "description": {
++      "identifier": "wizardiuz:scroll_hail_requiem",
++      "menu_category": {
++        "category": "items"
++      }
++    },
++    "components": {
++      "minecraft:max_stack_size": 1,
++      "minecraft:icon": "wizardiuz_scroll_hail_requiem",
++      "minecraft:display_name": {
++        "value": "item.wizardiuz:scroll_hail_requiem.name"
++      }
++    }
++  }
++}
+diff --git a/Wizardiuz_Staff_Addon/BP/items/scroll_tide_warden.json b/Wizardiuz_Staff_Addon/BP/items/scroll_tide_warden.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b0d84b4d5ccc62079800ae3ba2489bbacb6b40f
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/items/scroll_tide_warden.json
+@@ -0,0 +1,18 @@
++{
++  "format_version": "1.21.10",
++  "minecraft:item": {
++    "description": {
++      "identifier": "wizardiuz:scroll_tide_warden",
++      "menu_category": {
++        "category": "items"
++      }
++    },
++    "components": {
++      "minecraft:max_stack_size": 1,
++      "minecraft:icon": "wizardiuz_scroll_tide_warden",
++      "minecraft:display_name": {
++        "value": "item.wizardiuz:scroll_tide_warden.name"
++      }
++    }
++  }
++}
+diff --git a/Wizardiuz_Staff_Addon/BP/items/staff_fire.json b/Wizardiuz_Staff_Addon/BP/items/staff_fire.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..177d443b608b1e74c81251a06ec6eaa03a198df8
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/items/staff_fire.json
+@@ -0,0 +1,24 @@
++{
++  "format_version": "1.21.10",
++  "minecraft:item": {
++    "description": {
++      "identifier": "wizardiuz:staff_fire",
++      "menu_category": {
++        "category": "equipment"
++      }
++    },
++    "components": {
++      "minecraft:max_stack_size": 1,
++      "minecraft:hand_equipped": true,
++      "minecraft:icon": "wizardiuz_staff_fire",
++      "minecraft:damage": 8,
++      "minecraft:display_name": {
++        "value": "item.wizardiuz:staff_fire.name"
++      },
++      "minecraft:use_modifiers": {
++        "use_duration": 0,
++        "movement_modifier": 1.0
++      }
++    }
++  }
++}
+diff --git a/Wizardiuz_Staff_Addon/BP/items/staff_hail.json b/Wizardiuz_Staff_Addon/BP/items/staff_hail.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..425570673a03604838b757fd7bcf75ade0c7eb3f
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/items/staff_hail.json
+@@ -0,0 +1,24 @@
++{
++  "format_version": "1.21.10",
++  "minecraft:item": {
++    "description": {
++      "identifier": "wizardiuz:staff_hail",
++      "menu_category": {
++        "category": "equipment"
++      }
++    },
++    "components": {
++      "minecraft:max_stack_size": 1,
++      "minecraft:hand_equipped": true,
++      "minecraft:icon": "wizardiuz_staff_hail",
++      "minecraft:damage": 8,
++      "minecraft:display_name": {
++        "value": "item.wizardiuz:staff_hail.name"
++      },
++      "minecraft:use_modifiers": {
++        "use_duration": 0,
++        "movement_modifier": 1.0
++      }
++    }
++  }
++}
+diff --git a/Wizardiuz_Staff_Addon/BP/items/staff_sand.json b/Wizardiuz_Staff_Addon/BP/items/staff_sand.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..94590df2532b6bef6b5992a0d807c7c6ce8328f2
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/items/staff_sand.json
+@@ -0,0 +1,24 @@
++{
++  "format_version": "1.21.10",
++  "minecraft:item": {
++    "description": {
++      "identifier": "wizardiuz:staff_sand",
++      "menu_category": {
++        "category": "equipment"
++      }
++    },
++    "components": {
++      "minecraft:max_stack_size": 1,
++      "minecraft:hand_equipped": true,
++      "minecraft:icon": "wizardiuz_staff_sand",
++      "minecraft:damage": 8,
++      "minecraft:display_name": {
++        "value": "item.wizardiuz:staff_sand.name"
++      },
++      "minecraft:use_modifiers": {
++        "use_duration": 0,
++        "movement_modifier": 1.0
++      }
++    }
++  }
++}
+diff --git a/Wizardiuz_Staff_Addon/BP/items/staff_water.json b/Wizardiuz_Staff_Addon/BP/items/staff_water.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..833edaf10a3b8aefb25372650bf20e77cbbc9599
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/items/staff_water.json
+@@ -0,0 +1,24 @@
++{
++  "format_version": "1.21.10",
++  "minecraft:item": {
++    "description": {
++      "identifier": "wizardiuz:staff_water",
++      "menu_category": {
++        "category": "equipment"
++      }
++    },
++    "components": {
++      "minecraft:max_stack_size": 1,
++      "minecraft:hand_equipped": true,
++      "minecraft:icon": "wizardiuz_staff_water",
++      "minecraft:damage": 8,
++      "minecraft:display_name": {
++        "value": "item.wizardiuz:staff_water.name"
++      },
++      "minecraft:use_modifiers": {
++        "use_duration": 0,
++        "movement_modifier": 1.0
++      }
++    }
++  }
++}
+diff --git a/Wizardiuz_Staff_Addon/BP/items/staff_wind.json b/Wizardiuz_Staff_Addon/BP/items/staff_wind.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..a54f822419ce678383ccb632b5c9da38856a805e
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/items/staff_wind.json
+@@ -0,0 +1,24 @@
++{
++  "format_version": "1.21.10",
++  "minecraft:item": {
++    "description": {
++      "identifier": "wizardiuz:staff_wind",
++      "menu_category": {
++        "category": "equipment"
++      }
++    },
++    "components": {
++      "minecraft:max_stack_size": 1,
++      "minecraft:hand_equipped": true,
++      "minecraft:icon": "wizardiuz_staff_wind",
++      "minecraft:damage": 8,
++      "minecraft:display_name": {
++        "value": "item.wizardiuz:staff_wind.name"
++      },
++      "minecraft:use_modifiers": {
++        "use_duration": 0,
++        "movement_modifier": 1.0
++      }
++    }
++  }
++}
+diff --git a/Wizardiuz_Staff_Addon/BP/manifest.json b/Wizardiuz_Staff_Addon/BP/manifest.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..60a2ed4003d6df5298807a40d7486c2317dd8ca6
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/manifest.json
+@@ -0,0 +1,34 @@
++{
++  "format_version": 2,
++  "header": {
++    "name": "Wizardiuz Staff BP",
++    "description": "Behavior pack for the Wizardiuz Staff elemental weapon system.",
++    "uuid": "f04cf40c-1303-4b7f-8500-f933f5eba462",
++    "version": [1, 0, 0],
++    "min_engine_version": [1, 21, 30]
++  },
++  "modules": [
++    {
++      "type": "data",
++      "uuid": "8b320329-fd84-446f-b246-08f69f75bcf2",
++      "version": [1, 0, 0]
++    },
++    {
++      "type": "script",
++      "language": "javascript",
++      "uuid": "665f2de2-b30a-48b8-8da5-6ca73b2eb6a6",
++      "version": [1, 0, 0],
++      "entry": "scripts/main.js"
++    }
++  ],
++  "dependencies": [
++    {
++      "module_name": "@minecraft/server",
++      "version": "1.14.0"
++    },
++    {
++      "uuid": "3234e31b-ad4d-4f77-9ab2-b530577d688e",
++      "version": [1, 0, 0]
++    }
++  ]
++}
+diff --git a/Wizardiuz_Staff_Addon/BP/pack_icon.png b/Wizardiuz_Staff_Addon/BP/pack_icon.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/pack_icon.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/BP/scripts/main.js b/Wizardiuz_Staff_Addon/BP/scripts/main.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..a3ff80938c80f424a0731995136c0a55a5f1edea
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/BP/scripts/main.js
+@@ -0,0 +1,138 @@
++import { world, system, ItemStack, EquipmentSlot } from "@minecraft/server";
++
++const STAFF_ORDER = ["water", "fire", "wind", "sand", "hail"];
++const STAFF_IDS = Object.fromEntries(STAFF_ORDER.map((e) => [e, `wizardiuz:staff_${e}`]));
++const SCROLL_TO_ELEMENT = {
++  "wizardiuz:scroll_tide_warden": "water",
++  "wizardiuz:scroll_banished_sun": "fire",
++  "wizardiuz:scroll_gale_sigil": "wind",
++  "wizardiuz:scroll_dune_aegis": "sand",
++  "wizardiuz:scroll_hail_requiem": "hail"
++};
++
++function getElementFromStaff(typeId) {
++  return STAFF_ORDER.find((e) => typeId === STAFF_IDS[e]);
++}
++
++function getOffhand(player) {
++  return player.getComponent("equippable")?.getEquipment(EquipmentSlot.Offhand);
++}
++
++function setMainhandToElement(player, element) {
++  const inv = player.getComponent("inventory")?.container;
++  if (!inv) return;
++  const slot = player.selectedSlotIndex;
++  inv.setItem(slot, new ItemStack(STAFF_IDS[element], 1));
++}
++
++function nearbyMobs(player, radius = 8) {
++  const entities = player.dimension.getEntities({ location: player.location, maxDistance: radius });
++  return entities.filter((e) => e.id !== player.id && e.typeId !== "minecraft:item");
++}
++
++function damageRing(player, radius, amount, cause = "magic") {
++  for (const e of nearbyMobs(player, radius)) {
++    try {
++      e.applyDamage(amount, { cause, damagingEntity: player });
++    } catch {}
++  }
++}
++
++function pushBurst(player, strength = 1.4, radius = 6) {
++  for (const e of nearbyMobs(player, radius)) {
++    const dx = e.location.x - player.location.x;
++    const dz = e.location.z - player.location.z;
++    const mag = Math.max(Math.hypot(dx, dz), 0.1);
++    e.applyKnockback(dx / mag, dz / mag, strength, 0.2);
++  }
++}
++
++function effectSelf(player, effect, duration, amp = 0, showParticles = true) {
++  try {
++    player.addEffect(effect, duration, { amplifier: amp, showParticles });
++  } catch {}
++}
++
++const ABILITIES = {
++  water: [
++    { name: "Tidal Lance", category: "Attack", run: (p) => { damageRing(p, 7, 6, "magic"); p.dimension.runCommandAsync(`particle minecraft:splash_particle ${p.location.x} ${p.location.y + 1} ${p.location.z}`); } },
++    { name: "Mending Rain", category: "Support", run: (p) => { effectSelf(p, "regeneration", 120, 1); effectSelf(p, "resistance", 100, 0); } },
++    { name: "Foam Guard", category: "Defense", run: (p) => { effectSelf(p, "absorption", 200, 1); effectSelf(p, "water_breathing", 400, 0); } },
++    { name: "Riptide Burst", category: "Attack", run: (p) => { pushBurst(p, 1.6, 8); damageRing(p, 5, 4, "entityAttack"); } },
++    { name: "Mist Veil", category: "Defense", run: (p) => { effectSelf(p, "invisibility", 80, 0); effectSelf(p, "slow_falling", 120, 0); } },
++    { name: "Spring of Focus", category: "Support", run: (p) => { effectSelf(p, "saturation", 1, 0, false); effectSelf(p, "speed", 120, 0); } }
++  ],
++  fire: [
++    { name: "Coffin of the Banished Sun", category: "Attack", run: (p) => { damageRing(p, 9, 8, "fire"); p.dimension.runCommandAsync(`execute at @s run summon minecraft:small_fireball ^ ^1 ^2`); } },
++    { name: "Solar Bulwark", category: "Defense", run: (p) => { effectSelf(p, "fire_resistance", 300, 0); effectSelf(p, "resistance", 120, 1); } },
++    { name: "Ember Rush", category: "Support", run: (p) => { effectSelf(p, "speed", 160, 1); effectSelf(p, "strength", 100, 0); } },
++    { name: "Blazing Volley", category: "Attack", run: (p) => { for (let i = 0; i < 3; i++) system.runTimeout(() => p.dimension.runCommandAsync(`execute at @s run summon minecraft:small_fireball ^ ^1 ^2`), i * 6); } },
++    { name: "Scorch Field", category: "Attack", run: (p) => { damageRing(p, 6, 7, "fireTick"); } },
++    { name: "Phoenix Pulse", category: "Support", run: (p) => { effectSelf(p, "regeneration", 100, 1); effectSelf(p, "health_boost", 200, 1); } }
++  ],
++  wind: [
++    { name: "Cyclone Jab", category: "Attack", run: (p) => { pushBurst(p, 2.0, 9); damageRing(p, 6, 5, "magic"); } },
++    { name: "Tailwind", category: "Support", run: (p) => { effectSelf(p, "speed", 220, 2); effectSelf(p, "jump_boost", 220, 1); } },
++    { name: "Aerial Skin", category: "Defense", run: (p) => { effectSelf(p, "slow_falling", 220, 0); effectSelf(p, "resistance", 100, 0); } },
++    { name: "Vacuum Spike", category: "Attack", run: (p) => damageRing(p, 5, 9, "magic") },
++    { name: "Pressure Step", category: "Support", run: (p) => { effectSelf(p, "haste", 180, 1); effectSelf(p, "night_vision", 300, 0); } },
++    { name: "Skyguard", category: "Defense", run: (p) => effectSelf(p, "absorption", 140, 2) }
++  ],
++  sand: [
++    { name: "Dune Spear", category: "Attack", run: (p) => damageRing(p, 7, 7, "entityAttack") },
++    { name: "Granite Stance", category: "Defense", run: (p) => { effectSelf(p, "resistance", 220, 1); effectSelf(p, "slowness", 60, 0); } },
++    { name: "Nomad's Gift", category: "Support", run: (p) => { effectSelf(p, "saturation", 1, 0, false); effectSelf(p, "regeneration", 80, 0); } },
++    { name: "Quicksand Ring", category: "Attack", run: (p) => { damageRing(p, 5, 5, "magic"); p.dimension.runCommandAsync(`execute as @e[r=5,type=!player] at @s run effect @s slowness 3 4 true`); } },
++    { name: "Dust Veil", category: "Defense", run: (p) => effectSelf(p, "invisibility", 60, 0) },
++    { name: "Caravan Step", category: "Support", run: (p) => effectSelf(p, "speed", 180, 0) }
++  ],
++  hail: [
++    { name: "Shard Barrage", category: "Attack", run: (p) => damageRing(p, 8, 8, "freezing") },
++    { name: "Frostwall", category: "Defense", run: (p) => { effectSelf(p, "resistance", 120, 1); effectSelf(p, "absorption", 120, 1); } },
++    { name: "Winter Mercy", category: "Support", run: (p) => effectSelf(p, "regeneration", 120, 1) },
++    { name: "Permafrost Nova", category: "Attack", run: (p) => { damageRing(p, 5, 10, "freezing"); p.dimension.runCommandAsync(`execute as @e[r=5,type=!player] at @s run effect @s slowness 4 4 true`); } },
++    { name: "Iceblink", category: "Support", run: (p) => effectSelf(p, "speed", 80, 2) },
++    { name: "Crystal Shell", category: "Defense", run: (p) => effectSelf(p, "health_boost", 160, 1) }
++  ]
++};
++
++function castAbility(player, element, sneaking) {
++  const pool = ABILITIES[element];
++  const subset = sneaking ? pool.slice(3, 6) : pool.slice(0, 3);
++  const chosen = subset[Math.floor(Math.random() * subset.length)];
++  chosen.run(player);
++  player.onScreenDisplay.setActionBar(`§b${element.toUpperCase()} §7| §e${chosen.name} §8(${chosen.category})`);
++}
++
++world.afterEvents.itemUse.subscribe((ev) => {
++  const player = ev.source;
++  if (!player?.isValid()) return;
++
++  const item = ev.itemStack;
++  if (!item) return;
++  const element = getElementFromStaff(item.typeId);
++  if (!element) return;
++
++  const offhand = getOffhand(player);
++  const offhandId = offhand?.typeId;
++  const offhandElement = offhandId ? SCROLL_TO_ELEMENT[offhandId] : undefined;
++
++  if (player.isSneaking && !offhandElement) {
++    const idx = STAFF_ORDER.indexOf(element);
++    const next = STAFF_ORDER[(idx + 1) % STAFF_ORDER.length];
++    setMainhandToElement(player, next);
++    player.onScreenDisplay.setActionBar(`§dElement switched: §f${next.toUpperCase()}`);
++    return;
++  }
++
++  if (!offhandElement) {
++    player.onScreenDisplay.setActionBar("§7Offhand a Wizardiuz Scroll to cast abilities.");
++    return;
++  }
++
++  if (offhandElement !== element) {
++    setMainhandToElement(player, offhandElement);
++  }
++
++  castAbility(player, offhandElement, player.isSneaking);
++});
+diff --git a/Wizardiuz_Staff_Addon/README.md b/Wizardiuz_Staff_Addon/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..2a2bda27d2cc0087304694c9f4aad7f5cb20b877
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/README.md
+@@ -0,0 +1,86 @@
++# Wizardiuz Staff Addon (Bedrock 1.21.131)
++
++This addon provides the **Wizardiuz Staff** elemental weapon system with offhand scroll mechanics.
++
++## Features implemented
++
++- Elemental staff variants: **Water, Fire, Wind, Sand, Hail**.
++- **Crouch + Use** (without scroll in offhand) cycles element in order:
++  - Water → Fire → Wind → Sand → Hail → Water.
++- Offhand **Scrolls** unlock casting.
++- Two control lanes per scroll:
++  - **Use** = ability lane A (random one from 3 abilities)
++  - **Crouch + Use** = ability lane B (random one from 3 abilities)
++- Each element has **6 total abilities** with mixed category tags:
++  - Support / Attack / Defense
++- Staff crystal texture changes by held staff element (and auto-syncs to scroll element).
++
++## Items
++
++### Staffs
++- `wizardiuz:staff_water`
++- `wizardiuz:staff_fire`
++- `wizardiuz:staff_wind`
++- `wizardiuz:staff_sand`
++- `wizardiuz:staff_hail`
++
++### Scrolls (offhand)
++- `wizardiuz:scroll_banished_sun` (Fire)
++- `wizardiuz:scroll_tide_warden` (Water)
++- `wizardiuz:scroll_gale_sigil` (Wind)
++- `wizardiuz:scroll_dune_aegis` (Sand)
++- `wizardiuz:scroll_hail_requiem` (Hail)
++
++## Damage and balance
++
++- Base staff hit damage: **8**.
++- Ability damage ranges from **4–10** depending on element and category.
++- Most defensive/support casts trade immediate burst for buffs (resistance, regeneration, absorption, utility).
++- High-output abilities are constrained by:
++  - random selection inside lane pools
++  - requiring the correct offhand scroll
++  - requiring player input mode (sneak/non-sneak)
++
++## Effects used
++
++- Regeneration, Resistance, Absorption, Speed, Jump Boost, Haste
++- Water Breathing, Invisibility, Slow Falling, Fire Resistance, Strength
++- Health Boost, Slowness, Night Vision, Saturation
++- Knockback burst and AoE damage effects
++
++## Necessities
++
++- Minecraft Bedrock Edition **1.21.131** (or compatible 1.21.30+)
++- Enable in world settings:
++  - Holiday Creator Features / Beta APIs as needed for your platform build
++  - Script API support
++
++
++## Repository note (binary-free PR compatibility)
++
++This repository intentionally does **not** track binary files (`.png`, `.mcaddon`) to support PR systems that reject binaries.
++
++Generate all required textures/icons/package locally with:
++
++```bash
++python Wizardiuz_Staff_Addon/tools/build_addon.py
++```
++
++Outputs:
++- Generated textures/icons inside `Wizardiuz_Staff_Addon/RP/textures/items/`, `BP/pack_icon.png`, `RP/pack_icon.png`
++- Packaged addon: `Wizardiuz_Staff_Addon/dist/Wizardiuz_Staff.mcaddon`
++
++## Installation
++
++1. Build and import `Wizardiuz_Staff_Addon/dist/Wizardiuz_Staff.mcaddon`.
++2. Activate both packs in your world:
++   - Wizardiuz Staff BP
++   - Wizardiuz Staff RP
++3. Give yourself items:
++   - `/give @s wizardiuz:staff_water`
++   - `/give @s wizardiuz:scroll_banished_sun`
++
++## Notes
++
++- The script auto-replaces the held staff to match the offhand scroll's element for clear visual identity.
++- Actionbar shows cast result with element, ability name, and category.
+diff --git a/Wizardiuz_Staff_Addon/RP/manifest.json b/Wizardiuz_Staff_Addon/RP/manifest.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..5586eddc91b765adde013a75ba9c14cdbf0a50a0
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/manifest.json
+@@ -0,0 +1,17 @@
++{
++  "format_version": 2,
++  "header": {
++    "name": "Wizardiuz Staff RP",
++    "description": "Resource pack for Wizardiuz Staff textures and names.",
++    "uuid": "3234e31b-ad4d-4f77-9ab2-b530577d688e",
++    "version": [1, 0, 0],
++    "min_engine_version": [1, 21, 30]
++  },
++  "modules": [
++    {
++      "type": "resources",
++      "uuid": "41d30c2e-3437-4305-aa86-07f4f4deec97",
++      "version": [1, 0, 0]
++    }
++  ]
++}
+diff --git a/Wizardiuz_Staff_Addon/RP/pack_icon.png b/Wizardiuz_Staff_Addon/RP/pack_icon.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/pack_icon.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/RP/texts/en_US.lang b/Wizardiuz_Staff_Addon/RP/texts/en_US.lang
+new file mode 100644
+index 0000000000000000000000000000000000000000..dac9efaa0adb5f740b09a6f028aeb8ba3c00ae66
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/texts/en_US.lang
+@@ -0,0 +1,10 @@
++item.wizardiuz:staff_water.name=Wizardiuz Staff [Water]
++item.wizardiuz:staff_fire.name=Wizardiuz Staff [Fire]
++item.wizardiuz:staff_wind.name=Wizardiuz Staff [Wind]
++item.wizardiuz:staff_sand.name=Wizardiuz Staff [Sand]
++item.wizardiuz:staff_hail.name=Wizardiuz Staff [Hail]
++item.wizardiuz:scroll_banished_sun.name=Coffin Of The Banished Sun
++item.wizardiuz:scroll_tide_warden.name=Tide Warden Scroll
++item.wizardiuz:scroll_gale_sigil.name=Gale Sigil Scroll
++item.wizardiuz:scroll_dune_aegis.name=Dune Aegis Scroll
++item.wizardiuz:scroll_hail_requiem.name=Hail Requiem Scroll
+diff --git a/Wizardiuz_Staff_Addon/RP/texts/languages.json b/Wizardiuz_Staff_Addon/RP/texts/languages.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..818bf4c31889cf312674d72971b8d5dd907eaeee
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/texts/languages.json
+@@ -0,0 +1,3 @@
++[
++  "en_US"
++]
+diff --git a/Wizardiuz_Staff_Addon/RP/textures/item_texture.json b/Wizardiuz_Staff_Addon/RP/textures/item_texture.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..cad62affd604a6ecce678fb071dc9793a8452291
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/textures/item_texture.json
+@@ -0,0 +1,16 @@
++{
++  "resource_pack_name": "wizardiuz_staff_rp",
++  "texture_name": "atlas.items",
++  "texture_data": {
++    "wizardiuz_staff_water": {"textures": "textures/items/wizardiuz_staff_water"},
++    "wizardiuz_staff_fire": {"textures": "textures/items/wizardiuz_staff_fire"},
++    "wizardiuz_staff_wind": {"textures": "textures/items/wizardiuz_staff_wind"},
++    "wizardiuz_staff_sand": {"textures": "textures/items/wizardiuz_staff_sand"},
++    "wizardiuz_staff_hail": {"textures": "textures/items/wizardiuz_staff_hail"},
++    "wizardiuz_scroll_banished_sun": {"textures": "textures/items/wizardiuz_scroll_banished_sun"},
++    "wizardiuz_scroll_tide_warden": {"textures": "textures/items/wizardiuz_scroll_tide_warden"},
++    "wizardiuz_scroll_gale_sigil": {"textures": "textures/items/wizardiuz_scroll_gale_sigil"},
++    "wizardiuz_scroll_dune_aegis": {"textures": "textures/items/wizardiuz_scroll_dune_aegis"},
++    "wizardiuz_scroll_hail_requiem": {"textures": "textures/items/wizardiuz_scroll_hail_requiem"}
++  }
++}
+diff --git a/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_banished_sun.png b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_banished_sun.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_banished_sun.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_dune_aegis.png b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_dune_aegis.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_dune_aegis.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_gale_sigil.png b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_gale_sigil.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_gale_sigil.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_hail_requiem.png b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_hail_requiem.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_hail_requiem.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_tide_warden.png b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_tide_warden.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_scroll_tide_warden.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_fire.png b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_fire.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_fire.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_hail.png b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_hail.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_hail.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_sand.png b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_sand.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_sand.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_water.png b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_water.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_water.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_wind.png b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_wind.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4239539dd21ba9785cc899b55667e5e95ad85295
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/RP/textures/items/wizardiuz_staff_wind.png
+@@ -0,0 +1 @@
++TEXT PLACEHOLDER: run python Wizardiuz_Staff_Addon/tools/build_addon.py to generate binary asset.
+diff --git a/Wizardiuz_Staff_Addon/assets/texture_notes.md b/Wizardiuz_Staff_Addon/assets/texture_notes.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..577ad6a5437102a6217f0576e722ba4b8037a36d
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/assets/texture_notes.md
+@@ -0,0 +1,16 @@
++# Texture notes (16x16)
++
++Staff silhouette uses:
++- straight wooden shaft
++- curved top hook
++- crystal attached to the hook tip
++
++Element crystal colors:
++- Water: blue
++- Fire: red/orange
++- Wind: mint/cyan
++- Sand: amber
++- Hail: ice blue
++
++The exact 16x16 PNGs are generated by:
++- `tools/build_addon.py`
+diff --git a/Wizardiuz_Staff_Addon/tools/build_addon.py b/Wizardiuz_Staff_Addon/tools/build_addon.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..b98c0b32e976cc9373c4701c0e38e891e377b52e
+--- /dev/null
++++ b/Wizardiuz_Staff_Addon/tools/build_addon.py
+@@ -0,0 +1,140 @@
++#!/usr/bin/env python3
++"""Build Wizardiuz Staff binary assets locally (PNGs + .mcaddon).
++
++This script exists so the git repo can stay text-only for PR systems
++that do not accept binary files.
++"""
++from __future__ import annotations
++
++import shutil
++import struct
++import zlib
++from pathlib import Path
++
++ROOT = Path(__file__).resolve().parents[1]
++RP_ITEMS = ROOT / "RP" / "textures" / "items"
++DIST = ROOT / "dist"
++
++
++def png_write(path: Path, w: int, h: int, rgba: bytearray) -> None:
++    def chunk(tag: bytes, data: bytes) -> bytes:
++        return (
++            struct.pack(">I", len(data))
++            + tag
++            + data
++            + struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF)
++        )
++
++    raw = bytearray()
++    for y in range(h):
++        raw.append(0)
++        start = y * w * 4
++        raw.extend(rgba[start : start + w * 4])
++
++    ihdr = struct.pack(">IIBBBBB", w, h, 8, 6, 0, 0, 0)
++    payload = (
++        b"\x89PNG\r\n\x1a\n"
++        + chunk(b"IHDR", ihdr)
++        + chunk(b"IDAT", zlib.compress(bytes(raw), 9))
++        + chunk(b"IEND", b"")
++    )
++    path.parent.mkdir(parents=True, exist_ok=True)
++    path.write_bytes(payload)
++
++
++def blank(w: int, h: int) -> bytearray:
++    return bytearray([0, 0, 0, 0] * (w * h))
++
++
++def setpx(buf: bytearray, w: int, x: int, y: int, c: tuple[int, int, int, int]) -> None:
++    if 0 <= x < w and 0 <= y < len(buf) // (w * 4):
++        i = (y * w + x) * 4
++        buf[i : i + 4] = bytes(c)
++
++
++def draw_staff(path: Path, crystal: tuple[int, int, int, int]) -> None:
++    w = h = 16
++    b = blank(w, h)
++    wood = (92, 62, 35, 255)
++    gold = (196, 156, 74, 255)
++
++    for y in range(3, 16):
++        setpx(b, w, 7, y, wood)
++        setpx(b, w, 8, y, wood)
++    for p in [(7, 2), (8, 2), (9, 2), (10, 3), (10, 4), (9, 5), (8, 5)]:
++        setpx(b, w, *p, wood)
++    for p in [(8, 6), (9, 6), (8, 7), (9, 7), (8, 8), (9, 8), (7, 9), (8, 9)]:
++        setpx(b, w, *p, gold)
++    for p in [(11, 1), (12, 2), (11, 3), (10, 2), (11, 2)]:
++        setpx(b, w, *p, crystal)
++    setpx(b, w, 11, 2, (255, 255, 255, 200))
++
++    png_write(path, w, h, b)
++
++
++def draw_scroll(path: Path, color: tuple[int, int, int]) -> None:
++    w = h = 16
++    b = blank(w, h)
++    paper = (224, 210, 172, 255)
++    edge = (161, 126, 74, 255)
++    tint = (color[0], color[1], color[2], 180)
++
++    for y in range(2, 14):
++        for x in range(3, 13):
++            setpx(b, w, x, y, paper)
++    for x in range(3, 13):
++        setpx(b, w, x, 2, edge)
++        setpx(b, w, x, 13, edge)
++    for y in range(2, 14):
++        setpx(b, w, 3, y, edge)
++        setpx(b, w, 12, y, edge)
++    for y in range(4, 12):
++        for x in range(4, 12):
++            setpx(b, w, x, y, tint)
++    for x in range(5, 11):
++        setpx(b, w, x, 6, edge)
++        setpx(b, w, x, 8, edge)
++    for x in range(5, 10):
++        setpx(b, w, x, 10, edge)
++
++    png_write(path, w, h, b)
++
++
++def solid(path: Path, w: int, h: int, c: tuple[int, int, int, int]) -> None:
++    b = bytearray(list(c) * (w * h))
++    png_write(path, w, h, b)
++
++
++def main() -> None:
++    draw_staff(RP_ITEMS / "wizardiuz_staff_water.png", (55, 160, 255, 255))
++    draw_staff(RP_ITEMS / "wizardiuz_staff_fire.png", (255, 72, 32, 255))
++    draw_staff(RP_ITEMS / "wizardiuz_staff_wind.png", (193, 255, 236, 255))
++    draw_staff(RP_ITEMS / "wizardiuz_staff_sand.png", (255, 215, 120, 255))
++    draw_staff(RP_ITEMS / "wizardiuz_staff_hail.png", (150, 224, 255, 255))
++
++    draw_scroll(RP_ITEMS / "wizardiuz_scroll_banished_sun.png", (255, 98, 64))
++    draw_scroll(RP_ITEMS / "wizardiuz_scroll_tide_warden.png", (72, 132, 255))
++    draw_scroll(RP_ITEMS / "wizardiuz_scroll_gale_sigil.png", (117, 255, 208))
++    draw_scroll(RP_ITEMS / "wizardiuz_scroll_dune_aegis.png", (233, 196, 124))
++    draw_scroll(RP_ITEMS / "wizardiuz_scroll_hail_requiem.png", (168, 221, 255))
++
++    solid(ROOT / "BP" / "pack_icon.png", 256, 256, (255, 98, 64, 255))
++    solid(ROOT / "RP" / "pack_icon.png", 256, 256, (55, 160, 255, 255))
++
++    DIST.mkdir(exist_ok=True)
++    out = DIST / "Wizardiuz_Staff"
++    if (DIST / "Wizardiuz_Staff.mcaddon").exists():
++        (DIST / "Wizardiuz_Staff.mcaddon").unlink()
++    if out.exists():
++        shutil.rmtree(out)
++    out.mkdir()
++    shutil.copytree(ROOT / "BP", out / "BP")
++    shutil.copytree(ROOT / "RP", out / "RP")
++    shutil.make_archive(str(DIST / "Wizardiuz_Staff"), "zip", root_dir=out)
++    (DIST / "Wizardiuz_Staff.zip").rename(DIST / "Wizardiuz_Staff.mcaddon")
++    shutil.rmtree(out)
++    print("Built:", DIST / "Wizardiuz_Staff.mcaddon")
++
++
++if __name__ == "__main__":
++    main()
