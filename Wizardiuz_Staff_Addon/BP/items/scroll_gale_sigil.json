@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "wizardiuz:scroll_gale_sigil",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": "wizardiuz_scroll_gale_sigil",
+      "minecraft:display_name": {
+        "value": "item.wizardiuz:scroll_gale_sigil.name"
+      }
+    }
+  }
+}

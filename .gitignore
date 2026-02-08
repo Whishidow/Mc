@@ -1,0 +1,8 @@
+# Generated addon binaries
+*.mcaddon
+
+# Generated resource binaries
+Wizardiuz_Staff_Addon/BP/pack_icon.png
+Wizardiuz_Staff_Addon/RP/pack_icon.png
+Wizardiuz_Staff_Addon/RP/textures/items/*.png
+Wizardiuz_Staff_Addon/dist/
