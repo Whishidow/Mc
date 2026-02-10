@@ -1,0 +1,16 @@
+{
+  "resource_pack_name": "wizardiuz_staff_rp",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "wizardiuz_staff_water": {"textures": "textures/items/wizardiuz_staff_water"},
+    "wizardiuz_staff_fire": {"textures": "textures/items/wizardiuz_staff_fire"},
+    "wizardiuz_staff_wind": {"textures": "textures/items/wizardiuz_staff_wind"},
+    "wizardiuz_staff_sand": {"textures": "textures/items/wizardiuz_staff_sand"},
+    "wizardiuz_staff_hail": {"textures": "textures/items/wizardiuz_staff_hail"},
+    "wizardiuz_scroll_banished_sun": {"textures": "textures/items/wizardiuz_scroll_banished_sun"},
+    "wizardiuz_scroll_tide_warden": {"textures": "textures/items/wizardiuz_scroll_tide_warden"},
+    "wizardiuz_scroll_gale_sigil": {"textures": "textures/items/wizardiuz_scroll_gale_sigil"},
+    "wizardiuz_scroll_dune_aegis": {"textures": "textures/items/wizardiuz_scroll_dune_aegis"},
+    "wizardiuz_scroll_hail_requiem": {"textures": "textures/items/wizardiuz_scroll_hail_requiem"}
+  }
+}

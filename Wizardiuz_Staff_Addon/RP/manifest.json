@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Wizardiuz Staff RP",
+    "description": "Resource pack for Wizardiuz Staff textures and names.",
+    "uuid": "3234e31b-ad4d-4f77-9ab2-b530577d688e",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 30]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "41d30c2e-3437-4305-aa86-07f4f4deec97",
+      "version": [1, 0, 0]
+    }
+  ]
+}
